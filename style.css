@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+main{
+    width: 90%;
+    background-color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tela-urna{
+    margin-top: 2em;
+    width: 90%;
+    background-color: white;
+    border: 2px solid rgba(0,0,0,50%);
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+    min-height: 17em;
+}
+.tt{
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+.logotse{
+    margin-top: 1em;
+    width: 400px;
+    height: 200px;
+}
+.ajuda-inicia{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    animation: iniciar 5s infinite;
+}
+.ajuda-inicia strong{
+    padding: 0px 5px;
+}
+.visao-voto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+.cargo{
+    margin-bottom: 2em;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 25%;
+}
+.numeros-candidados{
+    display: flex;
+}
+.digitovoto:first-child{
+    margin-left: 15%;
+}
+.digitovoto{
+    font-size: 2em;
+    border: 1px solid black;
+    height: 60px;
+    width: 40px;
+    margin-right: 5px;
+    position: relative;
+}
+.digitovoto span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.candido-main{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+}
+.foto-candidado{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    background-size: cover;
+    filter: grayscale();
+}
+.nome-candidado{
+    margin-left: 2em;
+    font-family: 'Roboto', sans-serif;
+}
+.confirmar-voto{
+    padding-top: 1em;
+    font-size: 0.8em;
+    text-align: center;
+}
+.votarem-branco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 15em;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0% 30px;
+    text-align: center;
+    flex-direction: column;
+}
+.votarem-branco span:nth-child(2){
+    padding: 2em 0em;
+    line-height: 1.5em;
+}
+.votarem-branco span:nth-child(3){
+    line-height: 2em;
+}
+.corr{
+    background-color: hsl(32, 82%, 56%);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+.conf{
+    background-color: #77dd77;
+    padding: 10px 5px;
+    border-radius: 4px;
+}
+.telcado-urna{
+    width: 90%;
+    background-color: rgba(0,0,0,80%);
+    margin-bottom: 1em;
+}
+.numeros-urna-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 2em;
+}
+.numeros-geral{
+    display: flex;
+    flex-direction: row;
+}
+.numeros-geral *{
+    color: white;
+}
+.numero{
+    width: 4em;
+    height: 3em;
+    background-color: rgba(0,0,0,70%);
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0px -6px black;
+    transition: 0.11s;
+}
+.numero:hover{
+    cursor: pointer;
+}
+.numero:active{
+    transform: translateY(-6px);
+    box-shadow: 0px 0px rgba(0,0,0,70%);
+    transition: 0.11s;
+}
+.numero:nth-child(2){
+    margin: 0px 15px;
+}
+.btns-urna{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.btn{
+    border-radius: 3px;
+    box-shadow: 0px -6px rgba(0,0,0,60%);
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    transition: 0.11s;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn:active{
+    transform: translateY(-6px);
+    box-shadow: 0px 0px rgba(0,0,0,60%);
+    transition: 0.11s;
+}
+.branco{
+    background-color: white;
+    padding: 0.5em 0.5em;
+}
+.corrige{
+    background-color: hsl(32, 82%, 56%);
+    margin: 0px 10px;
+    padding: 0.5em 0.5em;
+}
+.confirma{
+    background-color: #77dd77;
+    padding: 1em 0.5em;
+}
+
+@keyframes iniciar {
+    0%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* ÍNICIO ANTES DE VOTAR*/
+
+main.inicio .tela-urna .logotse{
+    display: flex !important;
+} 
+
+main.inicio .tela-urna .ajuda-inicia{
+    display: flex !important;
+} 
+
+main.inicio .visao-voto{
+    display: none;
+}
+
+
+/* QUANDO VOTAR EM BRANCO*/
+
+main.branco .visao-voto{
+    display: none;
+}
+main.branco .votarem-branco{
+    display: flex !important;
+}
+
+/* VOTANDO PARA DEPUTADO*/
+
+main.deputado .tela-urna .nome-candidado{
+    opacity: 0;
+}
+main.deputado .confirmar-voto{
+    opacity: 0;
+}
+
+/* VOTANDO PARA PRESIDENTE*/
+main.presidente .tela-urna .nome-candidado{
+    opacity: 0;
+}
+main.presidente .confirmar-voto{
+    opacity: 0;
+}
+main.presidente .dgt4, main.presidente .dgt3{
+    display: none;
+}
+
+/* FINAL VOTACAO */
+
+main.finalvotacao .visao-voto{
+    display: none;
+}
+
+main.finalvotacao .votarem-branco{
+    display: none;
+}
+
+main.finalvotacao .logotse{
+    display: none;
+}
+
+main.finalvotacao .ajuda-inicia{
+    display: none;
+}
+main.finalvotacao .final-do-voto{
+    display: flex;
+}
+
+.finalvotacao .tela-urna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.final-do-voto span{
+    font-size: 2.5em;
+}
+main.final-do-voto .tela-urna .final-do-voto{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.final-do-voto{
+    align-items: center;
+}

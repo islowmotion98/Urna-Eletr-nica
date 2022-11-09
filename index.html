@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main class="inicio" id="maiin">
+        <div class="tela-urna" style="box-sizing: border-box;">
+            <div class="final-do-voto" style="display: none;" id="fimvo">
+                <span>FIM</span>
+            </div>
+            <div class="visao-voto">
+                <span class="cargo">Deputado Federal</span>
+                <div class="numeros-candidados">
+                    <div class="digitovoto dgt1" id="">
+                        <span id="dgt1"></span>
+                    </div>
+                    <div class="digitovoto dgt2" id="">
+                        <span id="dgt2"></span>
+                    </div>
+                    <div class="digitovoto dgt3" id="">
+                        <span id="dgt3"></span>
+                    </div>
+                    <div class="digitovoto dgt4" id="">
+                        <span id="dgt4"></span>
+                    </div>
+                </div>
+                <div class="candido-main">
+                    <div class="foto-candidado" id="ft-candidato"></div>
+                    <span class="nome-candidado" id="nomecandi">Maça</span>
+                </div>
+                <span class="confirmar-voto"  id="showconfirm">Aperte <strong>CONFIRMA</strong> para votar no candidato <span id="nomecandi2">tenis</span></span>
+            </div>
+            <div class="votarem-branco" style="display: none; box-sizing: border-box;">
+                <span>Confirmar voto em branco para <span id="trocaNomeCargo">Deputado Federal</span><span></span></span>
+                <span>Aperte <span class="corr">corrige</span> para voltar</span>
+                <span>Aperte <span class="conf">confirme</span> para confirmar</span>
+            </div>
+            <img style="display: none;" class="logotse" src="./imagens/logo.tse.png" alt="logo">
+            <span style="display: none;" class="ajuda-inicia">Aperte <strong>CONFIRMA</strong> para iniciar a eleição</span>
+        </div>
+        <div class="telcado-urna">
+            <div class="numeros-urna-main">
+                <div class="numeros-geral linha1">
+                        <button class="numero" onclick="digito(1)">1</button>
+                        <button class="numero" onclick="digito(2)">2</button>
+                        <button class="numero" onclick="digito(3)">3</button>
+                </div>
+                <div class="numeros-geral linha2">
+                    <button class="numero" onclick="digito(4)">4</button>
+                    <button class="numero" onclick="digito(5)">5</button>
+                    <button class="numero" onclick="digito(6)">6</button>
+                </div>
+                <div class="numeros-geral linha3">
+                    <button class="numero" onclick="digito(7)">7</button>
+                    <button class="numero" onclick="digito(8)">8</button>
+                    <button class="numero" onclick="digito(9)">9</button>
+                </div>
+                <div class="numeros-geral linha4">
+                    <button class="numero" onclick="digito(0)">0</button>
+                </div>
+            </div>
+            <div class="btns-urna">
+                <button class="btn branco" onclick="branco()">branco</button>
+                <button class="btn corrige" onclick="corrige()">corrige</button>
+                <button class="btn confirma" onclick="confirma()">confirma</button>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
